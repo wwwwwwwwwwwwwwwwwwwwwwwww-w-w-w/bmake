@@ -1,0 +1,11 @@
+{
+    "name" : "github_example",
+    "files" : ["c_code","cpp_code"],
+    "c_code" : {
+        "languages" : ["c"]   
+    },
+    "cpp_code" : {
+        "languages" : ["c++"]
+    }
+
+}
