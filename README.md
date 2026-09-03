@@ -46,5 +46,5 @@ a very basic config .json that would work for this example is:
 
 }
 ```
-the json is simply a way to describe how bmake should behave. in the documentation folder it has more detail about it. by now this should work
+the json is simply a way to describe how bmake should behave. in the documentation folder there is more detail about it. by now this should work
 so how do we compile it? simple! just use ./bmake on the terminal(with the program in the current folder). you can also give the path to the project you want to compile.
