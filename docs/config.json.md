@@ -4,6 +4,8 @@
 
 *config.json is a file that every project on bmake needs to have(more on that later).*
 *it contains a lot of settings that tell how to bmake should build the project.*
+*as the name says, it is writen in [json](https://json.org)*
+
 [extra info](#extra_info)
 ## settings
 ```text
@@ -58,12 +60,20 @@ makelib
 >tells bmake to make a lib (.a)
 >doesn't need any value
 ```
-</a>
+
 
 ## extra_info
-hello\
-im verity,  
-your personal helper friend!
-</a>
+[main info](config.json)
+you don't actualy need to have config.json, much less al of the tags. most all of it can be skiped and those that can't bmake will automaticaly chose an value for them\
+still it is recommended to have it and use any value that makes sense for your project.\
+for internal files in your project, you don't need to manualy create an config.json for them. you can just do:
+```json
+"name_of_your_file" : {
+    "tag1" : "value",
+    "tag2" : ["value1","value2"]
+}
+```
+
+
 
 
