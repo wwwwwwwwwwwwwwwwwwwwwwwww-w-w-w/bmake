@@ -1,6 +1,6 @@
 #temp
 
-temp is an folder that bmakes automaticaly makes for every projects it compiles.
+temp is an folder that bmake automaticaly makes for every projects it compiles.
 
 ***do not mess with temp unless you know what you are doing. if you need bmake to not use it delete it or use -recompile***
 
