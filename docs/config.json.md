@@ -63,7 +63,7 @@ makelib
 
 
 ## extra_info
-[main info](#main_info)
+[main info](#main_info)\
 you don't actualy need to have config.json, much less al of the tags. most all of it can be skiped and those that can't bmake will automaticaly chose an value for them\
 still it is recommended to have it and use any value that makes sense for your project.\
 for internal files in your project, you don't need to manualy create an config.json for them. you can just do:
