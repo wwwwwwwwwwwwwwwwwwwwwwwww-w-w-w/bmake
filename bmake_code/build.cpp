@@ -96,7 +96,7 @@ if (it != code_and_extension.end()) {
                                            ? std::string(config_file["compile_tags"]["c++"]) : "";
                 
                 std::string comand = "g++ -c " + compile_tags + " " + pkg_args + " -o " + out_o_file + " ../" + file.string();
-                std::cout << "\n[DEBUG COMPILACAO] " << comand << "\n\n";
+                std::cout << "\ncompling a c++ file with: " << comand << "\n\n";
                 system(comand.c_str());
 
                 std::string temp = "ar rcs " + out_a_file + " " + out_o_file;
@@ -109,7 +109,7 @@ if (it != code_and_extension.end()) {
                                            ? std::string(config_file["compile_tags"]["c"]) : "";
                 
                 std::string comand = "gcc -c " + compile_tags + " " + pkg_args + " -o " + out_o_file + " ../" + file.string();
-                std::cout << "\n[DEBUG COMPILACAO] " << comand << "\n\n";
+                std::cout << "\ncompling a c file with: " << comand << "\n\n";
                 system(comand.c_str());
 
                 std::string temp = "ar rcs " + out_a_file + " " + out_o_file;
@@ -135,7 +135,19 @@ if (it != code_and_extension.end()) {
                 system(cmd.c_str());
                 afiles.push_back(out_a_file);
             }
+            else if (lang == "zig") {
+                std::string compile_tags = config_file.contains("compile_tags") && config_file["compile_tags"].contains("zig") 
+                                           ? std::string(config_file["compile_tags"]["zig"]) : "";
+                #ifdef _WIN32
+                    std::string cmd = "zig build-lib ../" + file.string() + " -target x86_64-windows-gnu -femit-bin=" + out_a_file + " " + compile_tags;
+                #else
+                    std::string cmd = "zig build-lib ../" + file.string() + " -femit-bin=" + out_a_file + " " + compile_tags;
+                #endif
 
+                std::cout << "\n[DEBUG COMPILACAO] " << cmd << "\n\n";
+                system(cmd.c_str());
+                afiles.push_back(out_a_file);
+            }
             // 5. Atualiza o arquivo de hash
             std::ofstream hash_out(hash_path);
             hash_out << new_hash;
