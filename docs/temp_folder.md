@@ -1,4 +1,4 @@
-#temp
+# temp
 
 temp is a folder that bmake automaticaly makes for every project it compiles.
 
