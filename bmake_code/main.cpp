@@ -256,7 +256,7 @@ std::string exec_path = fs::absolute(getExecutablePath()).string();
     // 2. Monta o comando com ASPAS em volta dos caminhos para evitar bugs com espaços
     std::string cmd = "\"" + exec_path + "\" \"" + folder.string() + "\" -makelib";        
     
-    std::cout << "\n[BUILD MODULE] Entrando na sub-pasta: " << folder.string() << "...\n";
+    std::cout << "\nbuilding: " << folder.string() << "...\n";
     system(cmd.c_str());
 }
     }
@@ -315,7 +315,7 @@ bool has_build_worked {true};
     if(!has_item(cli_arguments,"-makelib") and !(config_file.contains("makelib"))){
 std::string cmd = "g++ -Wl,--start-group " + all_files +
                    " -Wl,--end-group -o " + out_name + " " + apenas_libs(pkg_args) + " " + link_tags;
-   std::cout << "comands are :" + cmd;
+   std::cout << "final comand is :" + cmd;
                    std::system(cmd.c_str());
     fs::current_path("../");
     if(!copy_from_child_to_current("temp",out_name)){
