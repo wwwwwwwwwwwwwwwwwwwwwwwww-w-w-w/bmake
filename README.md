@@ -6,7 +6,7 @@ basic project structure:
 ```text
 my-app/
 |──config.json
-|── bmake
+|── bumake
 ├── c_code/
 |    └──main.c
 └── cpp_code/
