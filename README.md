@@ -1,4 +1,4 @@
-# bmake
+# bumake
 just a simple build system.
 disclaimer: i admit i coded part of the project with AI and i just tested with arch linux. 
 
@@ -46,5 +46,5 @@ a very basic config .json that would work for this example is:
 
 }
 ```
-the json is simply a way to describe how bmake should behave. in the documentation folder there is more detail about it. by now this should work
-so how do we compile it? simple! just use ./bmake on the terminal(with the program in the current folder). you can also give the path to the project you want to compile.
+the json is simply a way to describe how bumake should behave. in the documentation folder there is more detail about it. by now this should work
+so how do we compile it? simple! just use ./bumake on the terminal(with the program in the current folder). you can also give the path to the project you want to compile.
